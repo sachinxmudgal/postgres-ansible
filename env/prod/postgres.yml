@@ -1,0 +1,15 @@
+---
+- name: PostgreSQL Validation
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+    - name: Check PostgreSQL Version
+      command: psql --version
+      register: postgres_version
+
+    - name: Display PostgreSQL Version
+      debug:
+        var: postgres_version.stdout
