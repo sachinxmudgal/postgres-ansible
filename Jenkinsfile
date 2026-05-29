@@ -1,22 +1,14 @@
 @Library('postgres-shared-lib') _
 
-def config = [
+node {
 
 
-REPO_URL : 'https://github.com/sachinxmudgal/postgres-ansible.git',
+checkout scm
 
-SLACK_CHANNEL_NAME : 'build-status',
-
-ENVIRONMENT : 'prod',
-
-CODE_BASE_PATH : 'env/prod',
-
-ACTION_MESSAGE : 'PostgreSQL Deployment Completed',
-
-KEEP_APPROVAL_STAGE : true
-
-
-]
+def config = load 'config.groovy'
 
 postgresPipeline(config)
+
+
+}
 

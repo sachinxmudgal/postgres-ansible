@@ -1,15 +1,18 @@
 return [
 
-    REPO_URL : '',
 
-    SLACK_CHANNEL_NAME : 'build-status',
+REPO_URL : 'https://github.com/sachinxmudgal/postgres-ansible.git',
 
-    ENVIRONMENT : 'prod',
+SLACK_CHANNEL_NAME : 'build-status',
 
-    CODE_BASE_PATH : 'env/prod',
+ENVIRONMENT : 'prod',
 
-    ACTION_MESSAGE : 'PostgreSQL Deployment Completed',
+CODE_BASE_PATH : 'env/prod',
 
-    KEEP_APPROVAL_STAGE : true
+ACTION_MESSAGE : 'PostgreSQL Deployment Completed',
+
+KEEP_APPROVAL_STAGE : true
+
 
 ]
+
