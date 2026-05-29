@@ -1,5 +1,9 @@
 @Library('postgres-shared-lib') _
 
-def config = load 'config.groovy'
+node {
 
-postgresPipeline(config)
+    def config = load 'config.groovy'
+
+    postgresPipeline(config)
+
+}
